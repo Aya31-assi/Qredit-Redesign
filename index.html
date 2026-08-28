@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+
+<head>
+     <meta charset="utf-8" />
+     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+     <meta content="Qredit منصة تكنولوجيا مالية فلسطينية تجمع قنوات الدفع وإدارة العمليات في مكان واحد، لتساعد أعمالك على استقبال المدفوعات وإدارتها بمرونة ووضوح."
+          name="description" />
+     <title>QREDIT — حلول دفع فلسطينية صُمّمت لنمو أعمالك</title>
+     <link href="https://fonts.googleapis.com" rel="preconnect" />
+     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+          rel="stylesheet" />
+
+     <!-- Tailwind CDN loads the utility framework; tailwind.config.js adds Qredit tokens-->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script src="./tailwind.config.js"></script>
+
+     <!-- custom.css owns the page design; animations.css contains named keyframes only -->
+     <link href="./css/custom.css" rel="stylesheet" />
+     <link href="./css/animations.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen bg-white text-qnavy font-arabic antialiased">
+     <!-- Accessibility helpers-->
+     <a class="skip-link" href="#main">انتقل إلى المحتوى الرئيسي</a>
+     <div aria-hidden="true" class="scroll-progress" id="scrollProgress"></div>
+     <!--SITE HEADER / NAVIGATION -->
+     <header class="nav sticky top-0 z-[100]" id="siteNav">
+          <div class="nav-inner flex items-center justify-between gap-6">
+               <a aria-label="الصفحة الرئيسية لـ Qredit" class="logo-lockup" href="#home">
+                    <img alt="" class="brand-wordmark" height="30" src="./assets/logos/qredit-logo.png" width="135" />
+               </a>
+               <nav aria-label="التنقل الرئيسي" class="nav-links flex items-center gap-6">
+                    <a href="#payments">طرق الدفع</a>
+                    <a href="#integration">التكامل</a>
+                    <a href="#pricing">الخطط</a>
+                    <a href="#faq">الأسئلة الشائعة</a>
+               </nav>
+               <div class="nav-right flex items-center gap-2.5">
+                    <!-- Switches the current page between Arabic and English-->
+                    <button aria-label="Switch to English" class="locale" data-language-toggle lang="en"
+                         type="button">EN</button>
+                    <a class="btn btn-ghost inline-flex items-center justify-center font-extrabold"
+                         href="https://portal.qredit.tech/">تسجيل الدخول</a>
+                    <a class="btn btn-mint inline-flex items-center justify-center font-extrabold" href="#contact">ابدأ
+                         الآن</a>
+                    <button aria-controls="mobileMenu" aria-expanded="false" aria-label="فتح قائمة التنقل"
+                         class="menu-toggle" id="menuToggle" type="button">
+                         <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-width="2"
+                              viewbox="0 0 24 24" width="20">
+                              <path d="M4 7h16M4 12h16M4 17h16"></path>
+                         </svg>
+                    </button>
+               </div>
+          </div>
+          <nav aria-label="التنقل على الهاتف" class="mobile-menu" id="mobileMenu">
+               <a href="#payments">طرق الدفع</a>
+               <a href="#integration">التكامل</a>
+               <a href="#pricing">الخطط</a>
+               <a href="#faq">الأسئلة الشائعة</a>
+               <button aria-label="Switch to English" class="locale mobile-locale" data-language-toggle lang="en"
+                    type="button">EN</button>
+               <div class="mobile-actions">
+                    <a class="btn btn-ghost inline-flex items-center justify-center font-extrabold"
+                         href="https://portal.qredit.tech/">تسجيل الدخول</a>
+                    <a class="btn btn-mint inline-flex items-center justify-center font-extrabold" href="#contact">ابدأ
+                         الآن</a>
+               </div>
+          </nav>
+     </header>
+     <!--MAIN LANDING-PAGE CONTENT-->
+     <main class="overflow-x-clip" id="main">
+          <!-- SECTION 01: HERO-->
+          <section class="hero" id="home">
+               <div class="wrap mx-auto hero-grid">
+                    <div class="hero-copy reveal">
+                         <span class="eyebrow"><span class="eyebrow-dot"></span>حلول دفع رقمية <strong
+                                   class="eyebrow-origin">فلسطينية</strong> صُمّمت لنمو أعمالك</span>
+                         <h1>منصة واحدة<span class="accent hero-break">إمكانيات بلا حدود</span></h1>
+                         <p><bdi class="brand-inline" lang="en">Qredit</bdi> هي منصة تكنولوجيا مالية فلسطينية تجمع قنوات
+                              الدفع المختلفة في مكان واحد، لتساعد أعمالك على استقبال المدفوعات وإدارتها بسهولة، وتمنح
+                              عملاءك تجربة دفع أكثر مرونة.</p>
+                         <div class="hero-actions flex flex-wrap gap-3">
+                              <a class="btn btn-mint inline-flex items-center justify-center font-extrabold"
+                                   href="#payments">اكتشف حلولنا</a>
+                              <a class="btn btn-ghost inline-flex items-center justify-center font-extrabold"
+                                   href="#contact">تواصل معنا</a>
+                         </div>
+                         <div aria-label="أبرز مزايا خطط Qredit" class="hero-proof">
+                              <span><span class="check-dot">✓</span>خطط اشتراك مرنة تناسب مختلف احتياجات الأعمال</span>
+                              <span><span class="check-dot">✓</span>استقبال المدفوعات بالشيكل والدولار والدينار</span>
+                         </div>
+                    </div>
+                    <div aria-label="تصور يوضح إنشاء التاجر لطلب دفع بالمبلغ، ثم مشاركة رابط أو QR يفتح للعميل شاشة تضم طرق دفع متعددة وقابلة للتمرير"
+                         class="payment-demo reveal" role="img" style="--i:1">
+                         <div aria-hidden="true" class="merchant-device">
+                              <div class="merchant-screen">
+                                   <div class="merchant-browser">
+                                        <span class="browser-address">portal.qredit.tech</span>
+                                        <span class="browser-dots"><i></i><i></i><i></i></span>
+                                   </div>
+                                   <div class="merchant-body">
+                                        <div class="merchant-heading">
+                                             <h3>إنشاء طلب دفع</h3>
+                                             <span class="merchant-step">طلب جديد</span>
+                                        </div>
+                                        <div class="amount-panel">
+                                             <div class="amount-top">
+                                                  <label>المبلغ المطلوب من العميل</label>
+                                                  <div class="currency-tabs"><span
+                                                            class="active">شيكل</span><span>دولار</span><span>دينار</span>
+                                                  </div>
+                                             </div>
+                                             <div class="amount-value"><strong>350.00</strong><small>ILS</small></div>
+                                             <div class="request-meta"><span>طلب رقم #1048</span><span>صالح لمدة 24
+                                                       ساعة</span></div>
+                                        </div>
+                                        <div class="generate-actions">
+                                             <span class="generate-button link"><svg fill="none" stroke="currentColor"
+                                                       stroke-width="2" viewbox="0 0 24 24">
+                                                       <path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1 1"></path>
+                                                       <path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1-1"></path>
+                                                  </svg>إنشاء رابط دفع</span>
+                                             <span class="generate-button qr"><svg fill="none" stroke="currentColor"
+                                                       stroke-width="2" viewbox="0 0 24 24">
+                                                       <path
+                                                            d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h3v3h-3zM19 14h2v7h-7v-2">
+                                                       </path>
+                                                  </svg>إنشاء رمز QR</span>
+                                        </div>
+                                        <div class="generated-output">
+                                             <div class="generated-copy">
+                                                  <small>تم إنشاء طلب الدفع بنجاح</small>
+                                                  <div class="payment-link"><code>pay.qredit.ps/r/7K2M9</code><b>نسخ</b>
+                                                  </div>
+                                                  <p>شارك الرابط مع العميل أو اعرض رمز QR ليختار طريقة الدفع المناسبة.
+                                                  </p>
+                                             </div>
+                                             <span class="mini-qr">
+                                                  <svg aria-hidden="true" viewbox="0 0 42 42">
+                                                       <rect fill="#fff" height="42" width="42"></rect>
+                                                       <g fill="#0C1531">
+                                                            <path
+                                                                 d="M2 2h14v14H2zm3 3v8h8V5zM26 2h14v14H26zm3 3v8h8V5zM2 26h14v14H2zm3 3v8h8v-8z">
+                                                            </path>
+                                                            <path
+                                                                 d="M20 3h3v4h-3zM18 10h5v3h-5zM19 17h4v5h-4zM26 19h5v4h-5zM34 18h5v6h-5zM18 27h4v4h-4zM24 25h4v7h-4zM31 27h3v4h-3zM36 27h4v5h-4zM18 34h6v5h-6zM27 35h4v4h-4zM34 34h6v6h-6z">
+                                                            </path>
+                                                       </g>
+                                                       <rect fill="#3B6FE0" height="4" width="4" x="8" y="8"></rect>
+                                                       <rect fill="#16C99B" height="4" width="4" x="32" y="8"></rect>
+                                                       <rect fill="#F0B43E" height="4" width="4" x="8" y="32"></rect>
+                                                  </svg>
+                                             </span>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <svg aria-hidden="true" class="demo-connection" preserveaspectratio="none"
+                              viewbox="0 0 560 570">
+                              <path d="M244 382 C322 418 350 305 438 300"></path>
+                              <circle cx="438" cy="300" r="5"></circle>
+                         </svg>
+                         <div aria-hidden="true" class="handoff-chip"><strong>رابط دفع أو QR</strong><span>يفتح شاشة
+                                   الدفع نفسها للعميل</span></div>
+                         <div aria-hidden="true" class="customer-phone">
+                              <div class="phone-screen">
+                                   <span class="phone-notch"></span>
+                                   <div class="phone-head">
+                                        <span class="payment-glyph"><svg fill="none" stroke="currentColor"
+                                                  stroke-width="1.8" viewbox="0 0 24 24">
+                                                  <rect height="14" rx="3" width="18" x="3" y="5"></rect>
+                                                  <path d="M7 10h10M7 14h3"></path>
+                                             </svg></span>
+                                        <h3>اختر طريقة الدفع</h3>
+                                        <p>اختر الطريقة الأنسب لإتمام عملية الدفع</p>
+                                   </div>
+                                   <div class="phone-method-viewport">
+                                        <div class="phone-method-list">
+                                             <div class="method-option selected"><span
+                                                       class="phone-method-logo">SG</span>
+                                                  <div>
+                                                       <h4>SADAD Gate</h4>
+                                                       <p>الدفع عبر بوابة سداد</p>
+                                                  </div><span class="method-radio"></span>
+                                             </div>
+                                             <div class="method-option"><span class="phone-method-logo">ES</span>
+                                                  <div>
+                                                       <h4>E-SADAD</h4>
+                                                       <p>الدفع عبر إي سداد</p>
+                                                  </div><span class="method-radio"></span>
+                                             </div>
+                                             <div class="method-option"><span class="phone-method-logo">QR</span>
+                                                  <div>
+                                                       <h4>الدفع عبر QR</h4>
+                                                       <p>امسح الرمز وأكمل الدفع</p>
+                                                  </div><span class="method-radio"></span>
+                                             </div>
+                                             <div class="method-option"><span class="phone-method-logo">V/M</span>
+                                                  <div>
+                                                       <h4>البطاقات البنكية</h4>
+                                                       <p>Visa وMastercard</p>
+                                                  </div><span class="method-radio"></span>
+                                             </div>
+                                             <div class="method-option"><span class="phone-method-logo">AP</span>
+                                                  <div>
+                                                       <h4>Apple Pay</h4>
+                                                       <p>الدفع عبر المحفظة الرقمية</p>
+                                                  </div><span class="method-radio"></span>
+                                             </div>
+                                             <div class="method-option"><span class="phone-method-logo">IB</span>
+                                                  <div>
+                                                       <h4>iBURAQ</h4>
+                                                       <p>خيار دفع رقمي إضافي</p>
+                                                  </div><span class="method-radio"></span>
+                                             </div>
+                                        </div>
+                                        <span class="phone-scroll-hint">المزيد من طرق الدفع ↓</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- SECTION 02: BRAND GROWTH MOTION
+     JavaScript: updateHeroZoom() in js/animations.js.
+     CSS: "Brand growth motion" block in css/custom.css. -->
+          <section aria-label="Where Money Moves Smarter" class="hero-zoom-scene" id="brandMotion">
+               <div class="hero-zoom-sticky" id="heroZoomSticky">
+                    <div class="hero-zoom-canvas" id="heroZoomCanvas">
+                         <div aria-hidden="true" class="hero-zoom-screen" id="heroZoomScreen"><img alt=""
+                                   class="hero-zoom-art" src="./assets/images/brand-growth-art.webp" /></div>
+                         <div aria-hidden="true" class="hero-zoom-shade"></div>
+                         <div class="hero-zoom-copy" dir="ltr">
+                              <span class="slogan-one" id="sloganOne">Where Money</span>
+                              <span class="slogan-two" id="sloganTwo">Moves Smarter.</span>
+                         </div>
+                         <span aria-hidden="true" class="hero-zoom-cue" id="heroZoomCue">Qredit</span>
+                    </div>
+               </div>
+          </section>
+          <!-- SECTION 03: BRAND VALUES
+     Animated ribbon and marquee for Trust, Innovation, Growth, and Simplicity -->
+          <section aria-labelledby="valuesTitle" class="values-section">
+               <svg aria-hidden="true" class="values-ribbon" preserveaspectratio="none" viewbox="0 0 1400 360">
+                    <defs>
+                         <lineargradient id="valuesRibbonGradient" x1="0" x2="1" y1="0" y2="0">
+                              <stop offset="0" stop-color="#F0B43E"></stop>
+                              <stop offset=".48" stop-color="#E2553D"></stop>
+                              <stop offset="1" stop-color="#3B6FE0"></stop>
+                         </lineargradient>
+                    </defs>
+                    <g id="valuesRibbonLines"></g>
+               </svg>
+               <div class="values-header wrap">
+                    <div class="values-heading reveal">
+                         <span class="kicker" style="color:var(--mint)">ما نؤمن به</span>
+                         <h2 id="valuesTitle">تجربة واحدة متكاملة، <span>ترتكز على أربع قيم</span></h2>
+                    </div>
+                    <p class="values-desc reveal">ليست مجرد مبادئ نؤمن بها؛ بل معيار نلتزم به في كل حل نصمّمه وكل تجربة
+                         نقدّمها.</p>
+               </div>
+               <div aria-label="قيم Qredit: الثقة، الابتكار، النمو، البساطة" class="values-marquee" role="group">
+                    <div aria-hidden="true" class="values-marquee-track">
+                         <div class="values-marquee-set">
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                         </div>
+                         <div class="values-marquee-set">
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                              <div class="values-marquee-group">
+                                   <span>الثقة</span><i></i><span>الابتكار</span><i></i><span>النمو</span><i></i><span>البساطة</span><i></i>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- SECTION 04: PAYMENT CHANNELS
+     Orbit-style map of the payment methods available through one integration-->
+          <section class="section-alt" id="payments">
+               <div class="wrap mx-auto method-layout">
+                    <div class="section-head reveal">
+                         <span class="kicker">قنوات دفع متعددة</span>
+                         <h2>كل طرق الدفع التي يحتاجها عملاؤك، في منصة واحدة</h2>
+                         <p>بتكامل واحد مع Qredit، تمنح عملاءك خيارات دفع محلية وعالمية، وتدير جميع العمليات من واجهة
+                              موحّدة، دون الحاجة إلى تكامل منفصل مع كل قناة.</p>
+                    </div>
+                    <div aria-label="طرق الدفع المدعومة مرتبة حول منصة Qredit" class="payment-universe reveal"
+                         id="paymentUniverse">
+                         <div class="universe-plane">
+                              <svg aria-hidden="true" class="fiber-burst" preserveaspectratio="xMidYMid meet"
+                                   viewbox="0 0 1000 620">
+                                   <g id="fiberBurstLines"></g>
+                              </svg>
+                              <span aria-hidden="true" class="orbit-ring one"></span><span aria-hidden="true"
+                                   class="orbit-ring two"></span>
+                              <div aria-hidden="true" class="payment-core">
+                                   <img alt="" class="mini-wordmark"
+                                        src="./assets/logos/qredit-logo-2.png" /><small>تكامل واحد</small>
+                              </div>
+                              <article class="payment-node" style="--node-x:50%;--node-y:9%;--node-delay:0s">
+                                   <div class="method-logo">ES</div>
+                                   <div>
+                                        <h3>E-SADAD</h3>
+                                        <p>دفع إلكتروني محلي</p>
+                                   </div>
+                              </article>
+                              <article class="payment-node" style="--node-x:79%;--node-y:22%;--node-delay:-.7s">
+                                   <div class="method-logo">SG</div>
+                                   <div>
+                                        <h3>Sadad Gateway</h3>
+                                        <p>بوابة دفع موحّدة</p>
+                                   </div>
+                              </article>
+                              <article class="payment-node" style="--node-x:85%;--node-y:54%;--node-delay:-1.4s">
+                                   <div class="method-logo">IB</div>
+                                   <div>
+                                        <h3>iBURAQ</h3>
+                                        <p>قناة دفع رقمية</p>
+                                   </div>
+                              </article>
+                              <article class="payment-node" style="--node-x:70%;--node-y:81%;--node-delay:-2.1s">
+                                   <div class="method-logo">AP</div>
+                                   <div>
+                                        <h3>Apple Pay</h3>
+                                        <p>دفع سريع وآمن</p>
+                                   </div>
+                              </article>
+                              <article class="payment-node" style="--node-x:30%;--node-y:81%;--node-delay:-2.8s">
+                                   <div class="method-logo">GP</div>
+                                   <div>
+                                        <h3>Google Pay</h3>
+                                        <p>دفع بالمحفظة الرقمية</p>
+                                   </div>
+                              </article>
+                              <article class="payment-node" style="--node-x:15%;--node-y:54%;--node-delay:-3.5s">
+                                   <div class="method-logo">VISA</div>
+                                   <div>
+                                        <h3>Visa</h3>
+                                        <p>دفع بالبطاقات</p>
+                                   </div>
+                              </article>
+                              <article class="payment-node" style="--node-x:21%;--node-y:22%;--node-delay:-4.2s">
+                                   <div class="method-logo">MC</div>
+                                   <div>
+                                        <h3>Mastercard</h3>
+                                        <p>دفع بالبطاقات</p>
+                                   </div>
+                              </article>
+                         </div>
+                         <span class="universe-caption">تكامل واحد · خيارات دفع أوسع</span>
+                    </div>
+               </div>
+          </section>
+          <!-- SECTION 05: INTEGRATION OPTIONS
+     Compares the standalone Qredit platform with API-based integration -->
+          <section class="integration-section" id="integration">
+               <div class="wrap mx-auto">
+                    <div class="section-head reveal">
+                         <span class="kicker">تكامل يناسب طريقة عملك</span>
+                         <h2>استخدم Qredit بالطريقة التي تناسب أعمالك</h2>
+                         <p>سواء كنت تبحث عن حل جاهز لاستقبال المدفوعات وإدارتها، أو ترغب في دمج خدمات الدفع مباشرة داخل
+                              موقعك أو تطبيقك، تمنحك Qredit المرونة لاختيار طريقة التكامل الأنسب لأعمالك.</p>
+                    </div>
+                    <div class="integration-stage reveal">
+                         <article class="solution-card light">
+                              <div class="icon-box"><svg aria-hidden="true" fill="none" stroke="currentColor"
+                                        stroke-width="1.8" viewbox="0 0 24 24">
+                                        <rect height="16" rx="2" width="18" x="3" y="4"></rect>
+                                        <path d="M3 9h18"></path>
+                                   </svg></div>
+                              <h3>استخدم Qredit كمنصة مستقلة</h3>
+                              <p>ابدأ باستقبال مدفوعاتك وإدارتها مباشرة من خلال منصة Qredit، دون الحاجة إلى تطوير نظام
+                                   دفع خاص أو امتلاك موقع إلكتروني. خيار مناسب للأعمال التي تريد البدء بسرعة وبخطوات
+                                   بسيطة.</p>
+                              <a class="btn btn-ghost inline-flex items-center justify-center font-extrabold"
+                                   href="#contact">ابدأ عبر المنصة</a>
+                         </article>
+                         <div aria-hidden="true" class="integration-bridge">
+                              <span class="bridge-pulse"></span>
+                              <span class="bridge-core"><svg fill="none" height="32" viewbox="0 0 100 100" width="32">
+                                        <path d="M84 50A34 34 0 1 1 50 16" stroke="#0C1531" stroke-width="20"></path>
+                                        <rect fill="#0C1531" height="24" width="24" x="58" y="58"></rect>
+                                   </svg></span>
+                         </div>
+                         <article class="solution-card dark">
+                              <div class="icon-box"><svg aria-hidden="true" fill="none" stroke="currentColor"
+                                        stroke-width="1.8" viewbox="0 0 24 24">
+                                        <path d="M8 6 2 12l6 6M16 6l6 6-6 6M14 3l-4 18"></path>
+                                   </svg></div>
+                              <h3>اربط Qredit بموقعك أو تطبيقك</h3>
+                              <p>من خلال واجهات Qredit البرمجية (<span dir="ltr">APIs</span>)، يمكنك دمج خدمات الدفع
+                                   داخل موقعك أو تطبيقك أو نظامك الحالي. نزوّد فريقك التقني بالتوثيق وأدوات التكامل
+                                   اللازمة لتنفيذ الربط بما يناسب بنية نظامك واحتياجات أعمالك.</p>
+                              <a class="btn btn-outline-light inline-flex items-center justify-center font-extrabold"
+                                   href="#contact">تحدث مع فريق التكامل</a>
+                         </article>
+                    </div>
+               </div>
+          </section>
+          <!-- SECTION 06: DAILY PRODUCT USE CASES
+     JavaScript: updatePhotoStory() in js/animations.js -->
+          <section class="photo-story" id="use-cases">
+               <div class="wrap mx-auto">
+                    <div class="section-head story-intro reveal">
+                         <span class="kicker">Qredit في تفاصيل العمل اليومية</span>
+                         <h2>من استقبال المدفوعات إلى متابعة الأداء. كل شيء أوضح.</h2>
+                         <p>من خلال منصة واحدة، تدير عمليات الدفع اليومية، تنشئ روابط الدفع، تتابع العمليات، وتفهم أداء
+                              أعمالك بصورة أوضح.</p>
+                    </div>
+                    <div class="story-stack" id="storyStack">
+                         <!-- Use case 01: unified payment-request management -->
+                         <div class="story-card-wrap" style="--card-index:0">
+                              <article class="story-card navy">
+                                   <div class="story-copy">
+                                        <span class="story-index">01 · منصة دفع موحّدة</span>
+                                        <h3>كل مدفوعاتك في مكان واحد</h3>
+                                        <p>تابع عمليات الدفع وقنواتها من لوحة تحكم واحدة، بدل التنقّل بين أنظمة وأدوات
+                                             متعددة.</p>
+                                        <ul class="story-mini-points">
+                                             <li><i></i><span>إدارة مركزية لعمليات الدفع.</span></li>
+                                             <li><i></i><span>وصول أسرع للمعلومات التي يحتاجها فريقك.</span></li>
+                                        </ul>
+                                   </div>
+                                   <div class="story-media product-ui">
+                                        <img alt="لوحة طلبات الدفع في Qredit ببيانات عملاء مجهولة"
+                                             class="story-photo product-shot" decoding="async" loading="lazy"
+                                             src="./assets/images/product-payment-requests.webp" />
+                                        <span class="story-photo-label">منصة دفع موحّدة</span>
+                                   </div>
+                              </article>
+                         </div>
+                         <!-- Use case 02: payment links, checkout, and confirmation -->
+                         <div class="story-card-wrap" style="--card-index:1">
+                              <article class="story-card paper">
+                                   <div class="story-copy">
+                                        <span class="story-index">02 · روابط دفع فورية</span>
+                                        <h3>أنشئ رابط دفع وشاركه خلال ثوانٍ</h3>
+                                        <p>حدّد المبلغ والعملة، أنشئ رابط الدفع، وشاركه مع عميلك ليفتح تجربة دفع واضحة
+                                             تنتهي بتأكيد العملية.</p>
+                                        <ul class="story-mini-points">
+                                             <li><i></i><span>إنشاء ومشاركة الرابط بخطوات بسيطة.</span></li>
+                                             <li><i></i><span>تجربة واضحة من اختيار طريقة الدفع حتى التأكيد.</span></li>
+                                        </ul>
+                                   </div>
+                                   <div class="story-media product-ui product-ui-stack">
+                                        <img alt="تجربة الدفع التي يفتحها رابط Qredit للعميل مع خيارات دفع متعددة وبيانات مجهولة"
+                                             class="story-photo product-shot product-shot-main" decoding="async"
+                                             loading="lazy" src="./assets/images/product-checkout.webp" />
+                                        <img alt="تأكيد إتمام الدفع في Qredit ببيانات عميل مجهولة"
+                                             class="product-shot-inset receipt-inset" decoding="async" loading="lazy"
+                                             src="./assets/images/product-payment-confirmed.webp" />
+                                        <span class="story-photo-label">من الرابط إلى تأكيد الدفع</span>
+                                   </div>
+                              </article>
+                         </div>
+                         <!-- Use case 03: multi-currency accounts and flexible payment options -->
+                         <div class="story-card-wrap" style="--card-index:2">
+                              <article class="story-card blue">
+                                   <div class="story-copy">
+                                        <span class="story-index">03 · عملات وخيارات دفع مرنة</span>
+                                        <h3>امنح عملاءك مرونة أكبر في الدفع</h3>
+                                        <p>استقبل المدفوعات بالشيكل والدولار والدينار، مع خيارات الدفع المتاحة على
+                                             حسابك.</p>
+                                        <ul class="story-mini-points">
+                                             <li><i></i><span>دعم الشيكل والدولار والدينار.</span></li>
+                                             <li><i></i><span>خيارات دفع متعددة ضمن تجربة واحدة.</span></li>
+                                        </ul>
+                                   </div>
+                                   <div class="story-media product-ui">
+                                        <img alt="حسابات العملات في Qredit للشيكل والدولار والدينار مع إخفاء أرقام الحسابات"
+                                             class="story-photo product-shot" decoding="async" loading="lazy"
+                                             src="./assets/images/product-currency-accounts.webp" />
+                                        <span class="story-photo-label">شيكل · دولار · دينار</span>
+                                   </div>
+                              </article>
+                         </div>
+                         <!-- Use case 04: real-time transaction tracking -->
+                         <div class="story-card-wrap" style="--card-index:3">
+                              <article class="story-card warm">
+                                   <div class="story-copy">
+                                        <span class="story-index">04 · متابعة لحظية</span>
+                                        <h3>اعرف حالة كل عملية بوضوح</h3>
+                                        <p>تابع تفاصيل عمليات الدفع وتحديثاتها من لوحة التحكم، لتصل إلى المعلومة التي
+                                             تحتاجها دون متابعة يدوية مشتتة.</p>
+                                        <ul class="story-mini-points">
+                                             <li><i></i><span>رؤية واضحة لتفاصيل كل عملية.</span></li>
+                                             <li><i></i><span>متابعة أسهل للتحديثات من مكان واحد.</span></li>
+                                        </ul>
+                                   </div>
+                                   <div class="story-media product-ui">
+                                        <img alt="سجل العمليات في Qredit مع الحالات والأرصدة وبيانات الحسابات المجهولة"
+                                             class="story-photo product-shot" decoding="async" loading="lazy"
+                                             src="./assets/images/product-transactions.webp" />
+                                        <span class="story-photo-label">متابعة العمليات</span>
+                                   </div>
+                              </article>
+                         </div>
+                         <!-- Use case 05: analytics and customer-performance reports -->
+                         <div class="story-card-wrap" style="--card-index:4">
+                              <article class="story-card navy">
+                                   <div class="story-copy">
+                                        <span class="story-index">05 · تقارير ورؤى</span>
+                                        <h3>حوّل بيانات الدفع إلى صورة أوضح لأعمالك</h3>
+                                        <p>راجع التقارير والبيانات من لوحة التحكم لتفهم حركة المدفوعات وتتابع أداء
+                                             العملاء والطلبات بصورة أوضح، دون الحاجة إلى API.</p>
+                                        <ul class="story-mini-points">
+                                             <li><i></i><span>قراءة الأداء حسب القيمة أو عدد الطلبات.</span></li>
+                                             <li><i></i><span>رؤية أوضح لبيانات العملاء من لوحة التحكم.</span></li>
+                                        </ul>
+                                   </div>
+                                   <div class="story-media product-ui product-ui-stack analytics-stack">
+                                        <img alt="لوحة تحليل أفضل العملاء حسب قيمة المدفوعات في Qredit بأسماء مجهولة"
+                                             class="story-photo product-shot product-shot-main" decoding="async"
+                                             loading="lazy" src="./assets/images/product-top-customers-amount.webp" />
+                                        <img alt="لوحة تحليل أفضل العملاء حسب عدد الطلبات في Qredit بأسماء مجهولة"
+                                             class="product-shot-inset analytics-inset" decoding="async" loading="lazy"
+                                             src="./assets/images/product-top-customers-orders.webp" />
+                                        <span class="story-photo-label">تقارير حسب القيمة والطلبات</span>
+                                   </div>
+                              </article>
+                         </div>
+                         <div aria-hidden="true" class="story-release"></div>
+                    </div>
+               </div>
+          </section>
+          <!-- SECTION 07: PRICING PLANS
+     Four subscription cards. The button below expands/collapses detailed features-->
+          <section class="pricing-section" id="pricing">
+               <div class="wrap mx-auto">
+                    <div class="pricing-top">
+                         <div class="section-head reveal">
+                              <span class="kicker">خطط الاشتراك</span>
+                              <h2>خطة تبدأ معك، وتنمو مع أعمالك</h2>
+                              <p>أربع خطط مرنة ترتفع مع احتياجاتك، من استقبال أول دفعة إلى تشغيل عمليات أكبر وحدود أعلى.
+                              </p>
+                         </div>
+                         <p class="currency-note">الأسعار الشهرية معروضة بالدولار.<br />الاشتراك السنوي يشمل شهرين
+                              مجاناً.</p>
+                    </div>
+                    <div class="pricing-stage" id="pricingPlans">
+                         <svg aria-hidden="true" class="pricing-wave" preserveaspectratio="none" viewbox="0 0 1200 330">
+                              <defs>
+                                   <lineargradient id="pricingWaveGradient" x1="1" x2="0" y1="1" y2="0">
+                                        <stop offset="0" stop-color="#3B6FE0" stop-opacity=".3"></stop>
+                                        <stop offset=".5" stop-color="#F0B43E" stop-opacity=".62"></stop>
+                                        <stop offset="1" stop-color="#E2553D" stop-opacity=".48"></stop>
+                                   </lineargradient>
+                                   <lineargradient id="pricingWaveFill" x1="1" x2="0" y1="1" y2="0">
+                                        <stop offset="0" stop-color="#3B6FE0" stop-opacity=".07"></stop>
+                                        <stop offset=".52" stop-color="#F0B43E" stop-opacity=".1"></stop>
+                                        <stop offset="1" stop-color="#E2553D" stop-opacity=".06"></stop>
+                                   </lineargradient>
+                              </defs>
+                              <path d="M1200 274C1055 302 954 232 823 244C678 258 624 197 487 185C331 171 226 120 0 70V330H1200Z"
+                                   fill="url(#pricingWaveFill)"></path>
+                              <path d="M1200 274C1055 302 954 232 823 244C678 258 624 197 487 185C331 171 226 120 0 70"
+                                   fill="none" stroke="url(#pricingWaveGradient)" stroke-width="3"></path>
+                              <path d="M1200 286C1040 308 946 246 814 258C666 271 612 212 478 200C324 187 210 134 0 87"
+                                   fill="none" opacity=".38" stroke="url(#pricingWaveGradient)" stroke-width="1"></path>
+                              <path d="M1200 260C1066 286 964 217 832 229C691 242 633 181 496 169C341 155 239 105 0 52"
+                                   fill="none" opacity=".32" stroke="url(#pricingWaveGradient)" stroke-width="1"></path>
+                         </svg>
+                         <div class="pricing-grid grid">
+                              <!-- Pricing plan 01: Launch -->
+                              <article class="price-card reveal" style="--i:0">
+                                   <div class="plan-name"><span class="plan-name-ar">اشتراك البداية</span><span
+                                             class="plan-name-en">Starter</span></div>
+                                   <div class="price"><span class="price-value" dir="ltr">$29.99</span><small>/
+                                             الشهر</small></div>
+                                   <p class="annual-price">299.99$ / سنوياً (شهران مجاناً)</p>
+                                   <p class="plan-description">للشركات الصغيرة والمتوسطة المسجلة.</p>
+                                   <ul class="plan-highlights">
+                                        <li><span><small>سعة النمو</small>حتى <strong>150 فاتورة شهرياً</strong> + 50
+                                                  فاتورة مجانية</span></li>
+                                        <li><span><small>الحد الأقصى للمعاملة</small><strong>300 شيكل</strong> أو ما
+                                                  يعادلها</span></li>
+                                   </ul><a class="btn btn-ghost inline-flex items-center justify-center font-extrabold"
+                                        href="#contact">ابدأ الآن</a>
+                                   <div class="plan-details">
+                                        <div class="plan-detail-group">
+                                             <h4>قنوات القبول الرقمي</h4>
+                                             <ul class="plan-list">
+                                                  <li>رمز الاستجابة السريعة (QR)</li>
+                                                  <li>إي-سداد (E-Sadad)</li>
+                                                  <li>بوابة سداد (SADAD GATE)</li>
+                                                  <li>بوابة CyberSource*</li>
+                                                  <li>البطاقات البنكية</li>
+                                                  <li>Apple Pay</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>العملات المدعومة</h4>
+                                             <ul class="plan-list">
+                                                  <li>شيكل، دولار، دينار</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الرسوم والعمولات</h4>
+                                             <ul class="plan-list">
+                                                  <li>الدفع عبر رمز (QR) — 2%</li>
+                                                  <li>إي-سداد — 2%</li>
+                                                  <li>بوابة سداد — 2%</li>
+                                                  <li>البطاقات البنكية — 5%</li>
+                                                  <li>مدفوعات Apple Pay — 5%</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>مسار السيولة*</h4>
+                                             <ul class="plan-list">
+                                                  <li>عند الطلب</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الدعم الفني</h4>
+                                             <ul class="plan-list">
+                                                  <li>خلال ساعات العمل</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الجاهزية الرقمية</h4>
+                                             <ul class="plan-list">
+                                                  <li>متوفرة</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الفئة المستهدفة</h4>
+                                             <ul class="plan-list">
+                                                  <li>الشركات الصغيرة والمتوسطة المسجلة</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>متطلبات الانضمام</h4>
+                                             <ul class="plan-list">
+                                                  <li>هوية المالك</li>
+                                                  <li>إثبات النشاط التجاري</li>
+                                                  <li>طلب انضمام موقع (من جميع الملاك)</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </article>
+                              <!-- Pricing plan 02: Growth (featured) -->
+                              <article class="price-card featured reveal" style="--i:1">
+                                   <span class="popular">الأكثر طلباً</span>
+                                   <div class="plan-name"><span class="plan-name-ar">اشتراك النمو</span><span
+                                             class="plan-name-en">Growth</span></div>
+                                   <div class="price"><span class="price-value" dir="ltr">$49.99</span><small>/
+                                             الشهر</small></div>
+                                   <p class="annual-price">499.99$ / سنوياً (شهران مجاناً)</p>
+                                   <p class="plan-description">للشركات النامية التي تتعامل مع حجم مبيعات أكبر.</p>
+                                   <ul class="plan-highlights">
+                                        <li><span><small>سعة النمو</small>حتى <strong>400 فاتورة شهرياً</strong> + 100
+                                                  فاتورة مجانية</span></li>
+                                        <li><span><small>الحد الأقصى للمعاملة</small><strong>500 شيكل</strong> أو ما
+                                                  يعادلها</span></li>
+                                   </ul><a class="btn btn-navy inline-flex items-center justify-center font-extrabold"
+                                        href="#contact">ابدأ الآن</a>
+                                   <div class="plan-details">
+                                        <div class="plan-detail-group">
+                                             <h4>قنوات القبول الرقمي</h4>
+                                             <ul class="plan-list">
+                                                  <li>رمز الاستجابة السريعة (QR)</li>
+                                                  <li>إي-سداد (E-Sadad)</li>
+                                                  <li>بوابة سداد (SADAD GATE)</li>
+                                                  <li>بوابة CyberSource*</li>
+                                                  <li>البطاقات البنكية</li>
+                                                  <li>Apple Pay</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>العملات المدعومة</h4>
+                                             <ul class="plan-list">
+                                                  <li>شيكل، دولار، دينار</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الرسوم والعمولات</h4>
+                                             <ul class="plan-list">
+                                                  <li>الدفع عبر رمز (QR) — 1.8%</li>
+                                                  <li>إي-سداد — 1.8%</li>
+                                                  <li>بوابة سداد — 1.8%</li>
+                                                  <li>البطاقات البنكية — 4%</li>
+                                                  <li>مدفوعات Apple Pay — 4%</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>مسار السيولة*</h4>
+                                             <ul class="plan-list">
+                                                  <li>عند الطلب</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الدعم الفني</h4>
+                                             <ul class="plan-list">
+                                                  <li>دعم أولوية 24/7*</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الجاهزية الرقمية</h4>
+                                             <ul class="plan-list">
+                                                  <li>متوفرة</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الفئة المستهدفة</h4>
+                                             <ul class="plan-list">
+                                                  <li>الشركات المتنامية والمتوسطة المسجلة</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>متطلبات الانضمام</h4>
+                                             <ul class="plan-list">
+                                                  <li>هوية المالك</li>
+                                                  <li>إثبات النشاط التجاري</li>
+                                                  <li>طلب انضمام موقع (من جميع الملاك)</li>
+                                                  <li>شهادة التسجيل (إن وجدت)</li>
+                                                  <li>أي مستندات أخرى ذات صلة</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </article>
+                              <!-- Pricing plan 03: Growth Plus -->
+                              <article class="price-card reveal" style="--i:2">
+                                   <div class="plan-name"><span class="plan-name-ar">اشتراك النمو بلس</span><span
+                                             class="plan-name-en">Growth Plus</span></div>
+                                   <div class="price"><span class="price-value" dir="ltr">$59.99</span><small>/
+                                             الشهر</small></div>
+                                   <p class="annual-price">599.99$ / سنوياً (شهران مجاناً)</p>
+                                   <p class="plan-description">للشركات النامية التي تحتاج سقف معاملات أعلى.</p>
+                                   <ul class="plan-highlights">
+                                        <li><span><small>سعة النمو</small>حتى <strong>400 فاتورة شهرياً</strong> + 100
+                                                  فاتورة مجانية</span></li>
+                                        <li><span><small>الحد الأقصى للمعاملة</small><strong>3,000 شيكل</strong> أو ما
+                                                  يعادلها</span></li>
+                                   </ul><a class="btn btn-ghost inline-flex items-center justify-center font-extrabold"
+                                        href="#contact">ابدأ الآن</a>
+                                   <div class="plan-details">
+                                        <div class="plan-detail-group">
+                                             <h4>قنوات القبول الرقمي</h4>
+                                             <ul class="plan-list">
+                                                  <li>رمز الاستجابة السريعة (QR)</li>
+                                                  <li>إي-سداد (E-Sadad)</li>
+                                                  <li>بوابة سداد (SADAD GATE)</li>
+                                                  <li>بوابة CyberSource*</li>
+                                                  <li>البطاقات البنكية</li>
+                                                  <li>Apple Pay</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>العملات المدعومة</h4>
+                                             <ul class="plan-list">
+                                                  <li>شيكل، دولار، دينار</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الرسوم والعمولات</h4>
+                                             <ul class="plan-list">
+                                                  <li>الدفع عبر رمز (QR) — 1.8%</li>
+                                                  <li>إي-سداد — 1.8%</li>
+                                                  <li>بوابة سداد — 1.8%</li>
+                                                  <li>البطاقات البنكية — 4%</li>
+                                                  <li>مدفوعات Apple Pay — 4%</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>مسار السيولة*</h4>
+                                             <ul class="plan-list">
+                                                  <li>عند الطلب</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الدعم الفني</h4>
+                                             <ul class="plan-list">
+                                                  <li>دعم أولوية 24/7*</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الجاهزية الرقمية</h4>
+                                             <ul class="plan-list">
+                                                  <li>متوفرة</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الفئة المستهدفة</h4>
+                                             <ul class="plan-list">
+                                                  <li>الشركات الصغيرة والمتوسطة المسجلة</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>متطلبات الانضمام</h4>
+                                             <ul class="plan-list">
+                                                  <li>هوية المالك</li>
+                                                  <li>إثبات النشاط التجاري</li>
+                                                  <li>طلب انضمام موقع (من جميع الملاك)</li>
+                                                  <li>شهادة التسجيل (إن وجدت)</li>
+                                                  <li>أي مستندات أخرى ذات صلة</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </article>
+                              <!-- Pricing plan 04: Ultimate / enterprise -->
+                              <article class="price-card reveal" style="--i:3">
+                                   <div class="plan-name"><span class="plan-name-ar">الاشتراك المتكامل</span><span
+                                             class="plan-name-en">Ultimate</span></div>
+                                   <div class="price"><span class="price-value">مخصص</span></div>
+                                   <p class="annual-price">تواصل مع فريق المبيعات</p>
+                                   <p class="plan-description">للمؤسسات الكبرى والشركات الكبيرة.</p>
+                                   <ul class="plan-highlights">
+                                        <li><span><small>سعة النمو</small><strong>غير محدودة</strong></span></li>
+                                        <li><span><small>الحد الأقصى للمعاملة</small><strong>5,000 شيكل</strong> أو ما
+                                                  يعادلها</span></li>
+                                   </ul><a class="btn btn-ghost inline-flex items-center justify-center font-extrabold"
+                                        href="#contact">اتصل بنا</a>
+                                   <div class="plan-details">
+                                        <div class="plan-detail-group">
+                                             <h4>قنوات القبول الرقمي</h4>
+                                             <ul class="plan-list">
+                                                  <li>رمز الاستجابة السريعة (QR)</li>
+                                                  <li>إي-سداد (E-Sadad)</li>
+                                                  <li>بوابة سداد (SADAD GATE)</li>
+                                                  <li>بوابة CyberSource*</li>
+                                                  <li>البطاقات البنكية</li>
+                                                  <li>Apple Pay</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>العملات المدعومة</h4>
+                                             <ul class="plan-list">
+                                                  <li>شيكل، دولار، دينار</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الرسوم والعمولات</h4>
+                                             <ul class="plan-list">
+                                                  <li>حسب الاتفاق</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>مسار السيولة*</h4>
+                                             <ul class="plan-list">
+                                                  <li>عند الطلب</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الدعم الفني</h4>
+                                             <ul class="plan-list">
+                                                  <li>دعم مميز 24/7*</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الجاهزية الرقمية</h4>
+                                             <ul class="plan-list">
+                                                  <li>متوفرة</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>الفئة المستهدفة</h4>
+                                             <ul class="plan-list">
+                                                  <li>المؤسسات الراسخة</li>
+                                                  <li>الشركات الكبرى</li>
+                                             </ul>
+                                        </div>
+                                        <div class="plan-detail-group">
+                                             <h4>متطلبات الانضمام</h4>
+                                             <ul class="plan-list">
+                                                  <li>هوية المالك</li>
+                                                  <li>إثبات النشاط التجاري</li>
+                                                  <li>إثبات تسجيل النشاط التجاري</li>
+                                                  <li>طلب انضمام موقع (من جميع الملاك)</li>
+                                                  <li>شهادة التسجيل</li>
+                                                  <li>أي مستندات أخرى ذات صلة</li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </article>
+                         </div>
+                    </div>
+                    <div class="pricing-toggle-wrap"><button aria-controls="pricingPlans" aria-expanded="false"
+                              class="pricing-toggle" id="pricingToggle" type="button"><span
+                                   class="pricing-toggle-label">عرض جميع تفاصيل الخطط</span><span aria-hidden="true"
+                                   class="pricing-toggle-icon"></span></button></div>
+                    <div class="pricing-footnote"><span>* بوابة CyberSource (Visa) متاحة حصرياً للشركات المسجلة
+                              فقط.</span><span>* دورات التسوية (أسبوعية، متجددة، اليوم التالي) تخضع لأنظمة السوق
+                              الفلسطيني وجداول البنوك.</span><span>* خدمة المساعد الآلي (Chatbot): خارج ساعات العمل عبر
+                              المساعد الآلي؛ وخلال ساعات العمل دعم مباشر من الموظفين.</span></div>
+               </div>
+          </section>
+          <!-- SECTION 08: FREQUENTLY ASKED QUESTIONS
+     Native <details> accordions; extra questions appear through the "show more" button -->
+          <section class="faq-section" id="faq">
+               <div class="wrap mx-auto">
+                    <div class="faq-head reveal">
+                         <span class="kicker">الأسئلة الشائعة</span>
+                         <h2>كل ما تحتاج معرفته، قبل أن تبدأ</h2>
+                         <p>اختر السؤال الأقرب لك لتظهر الإجابة مباشرة، واستكشف أهم ما يتعلق بالتسجيل وطرق الدفع
+                              والتكامل والتسويات.</p>
+                    </div>
+                    <div class="faq-showcase reveal" style="--i:1">
+                         <div class="faq-column" id="faqLeft">
+                              <details class="faq-card" open="">
+                                   <summary><span class="faq-question">كيف أسجل في Qredit؟</span><span
+                                             aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">قدّم طلب اشتراك أو انضمام، وسيتواصل معك أحد أعضاء فريق Qredit
+                                        لاستكمال التسجيل وتأكيد المعلومات المطلوبة ومساعدتك حتى تفعيل الحساب.</p>
+                              </details>
+                              <details class="faq-card">
+                                   <summary><span class="faq-question">ما الوثائق المطلوبة؟</span><span
+                                             aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">التسجيل في Qredit بسيط. كل ما نحتاجه هو صورة عن الهوية الشخصية،
+                                        ووثيقة تسجيل المنشأة، مثل السجل التجاري أو شهادة تسجيل الشركة.</p>
+                              </details>
+                              <details class="faq-card">
+                                   <summary><span class="faq-question">هل أحتاج إلى موقع إلكتروني لاستخدام
+                                             Qredit؟</span><span aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">لا. يمكنك استخدام Qredit كمنصة مستقلة لاستقبال المدفوعات
+                                        وإدارتها، ويصبح التكامل التقني خياراً عندما تريد ربطها بموقع أو تطبيق قائم.</p>
+                              </details>
+                              <details class="faq-card faq-extra">
+                                   <summary><span class="faq-question">ما طرق الدفع المتاحة؟</span><span
+                                             aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">تشمل خيارات الدفع E-SADAD وSadad Gateway وiBURAQ وApple Pay
+                                        وGoogle Pay وVisa وMastercard، وتدير عملياتك من خلال منصة Qredit.</p>
+                              </details>
+                              <details class="faq-card faq-extra">
+                                   <summary><span class="faq-question">ما العملات التي يمكن استقبالها؟</span><span
+                                             aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">يمكن استقبال المدفوعات بالشيكل والدولار والدينار، بحسب قناة
+                                        الدفع والخدمات المفعّلة على حسابك.</p>
+                              </details>
+                         </div>
+                         <aside aria-label="مركز إجابات Qredit" class="faq-center">
+                              <div aria-hidden="true" class="faq-orb">
+                                   <span class="faq-orb-ring one"></span>
+                                   <span class="faq-orb-ring two"></span>
+                                   <span class="faq-orb-core">
+                                        <img alt="" class="mini-wordmark"
+                                             src="./assets/logos/qredit-logo-2.png" /><small>FAQ</small>
+                                   </span>
+                              </div>
+                              <div class="faq-center-copy"><strong>الإجابة أقرب مما تتوقع</strong>
+                                   <p>اختر أي سؤال من الجانبين</p>
+                              </div>
+                              <a class="faq-contact-link" href="#contact">لم تجد إجابتك؟ <span>تواصل معنا</span></a>
+                         </aside>
+                         <div class="faq-column" id="faqRight">
+                              <details class="faq-card">
+                                   <summary><span class="faq-question">كيف تعمل روابط الدفع ورموز QR؟</span><span
+                                             aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">أنشئ الطلب في Qredit وحدد المبلغ والتفاصيل، ثم شارك الرابط أو
+                                        اعرض رمز QR. يكمل العميل الدفع، وتتابع أنت حالة العملية من لوحة التحكم.</p>
+                              </details>
+                              <details class="faq-card">
+                                   <summary><span class="faq-question">كيف أتابع المدفوعات الواردة؟</span><span
+                                             aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">استخدم لوحة التحكم لمراجعة تفاصيل كل عملية ومتابعة حالتها
+                                        وتحديثاتها من مكان واحد.</p>
+                              </details>
+                              <details class="faq-card">
+                                   <summary><span class="faq-question">متى تتم تسوية الأموال؟</span><span
+                                             aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">تختلف دورة التسوية بحسب إعداد حسابك والخدمة المستخدمة. يؤكد لك
+                                        فريق Qredit جدول التسوية المطبق على حسابك عند التفعيل.</p>
+                              </details>
+                              <details class="faq-card faq-extra">
+                                   <summary><span class="faq-question">كيف أتواصل مع فريق المبيعات؟</span><span
+                                             aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">يمكنك مراسلة فريق المبيعات مباشرة على sales@qredit.tech، وسيقوم
+                                        الفريق بمتابعة استفسارك ومساعدتك في اختيار الإعداد المناسب.</p>
+                              </details>
+                              <details class="faq-card faq-extra">
+                                   <summary><span class="faq-question">هل أحتاج إلى API لمراجعة التقارير؟</span><span
+                                             aria-hidden="true" class="faq-toggle"></span></summary>
+                                   <p class="faq-answer">لا. يمكنك مراجعة التقارير والبيانات من لوحة التحكم مباشرة، دون
+                                        الحاجة إلى API لمتابعة أداء المدفوعات.</p>
+                              </details>
+                         </div>
+                    </div>
+                    <div class="faq-more-wrap">
+                         <button aria-controls="faqLeft faqRight" aria-expanded="false" class="faq-more" id="faqMore"
+                              type="button">
+                              <span class="faq-more-label">عرض المزيد من الأسئلة</span>
+                              <svg aria-hidden="true" class="faq-more-icon" fill="none" stroke="currentColor"
+                                   stroke-width="1.8" viewbox="0 0 24 24">
+                                   <path d="m6 9 6 6 6-6"></path>
+                              </svg>
+                         </button>
+                    </div>
+               </div>
+          </section>
+          <!-- SECTION 09: CONTACT CALL TO ACTION
+     Final conversion block linking directly to Qredit sales email -->
+          <section class="cta-section" id="contact">
+               <div class="wrap mx-auto">
+                    <div class="cta-band reveal">
+                         <div aria-hidden="true" class="cta-ribbons"><span></span><span></span><span></span></div>
+                         <div>
+                              <h2>جاهز لطريقة أوضح لإدارة مدفوعاتك؟</h2>
+                              <p>فريق Qredit معك في كل خطوة، من اختيار الخطة وقنوات الدفع إلى إعداد حسابك وبدء استقبال
+                                   المدفوعات.</p>
+                         </div>
+                         <div class="cta-actions"><a
+                                   class="btn btn-navy inline-flex items-center justify-center font-extrabold"
+                                   href="mailto:sales@qredit.tech?subject=Qredit%20Subscription%20Request">ابدأ
+                                   طلبك</a><a
+                                   class="btn btn-ghost inline-flex items-center justify-center font-extrabold"
+                                   href="mailto:sales@qredit.tech">راسل المبيعات</a></div>
+                    </div>
+               </div>
+          </section>
+     </main>
+     <!-- SITE FOOTER -->
+     <footer>
+          <div class="wrap mx-auto">
+               <div class="footer-grid">
+                    <div class="footer-brand">
+                         <a aria-label="الصفحة الرئيسية لـ Qredit" class="logo-lockup" href="#home">
+                              <img alt="" class="brand-wordmark" height="29" src="./assets/logos/qredit-logo-2.png"
+                                   width="131" />
+                         </a>
+                         <p>حلول دفع فلسطينية صُمّمت لنمو أعمالك، تجمع قنوات الدفع وإدارة العمليات في منصة واحدة.</p>
+                    </div>
+                    <div class="footer-col">
+                         <h4>المنتج</h4><a href="#payments">طرق الدفع</a><a href="#integration">التكامل</a><a
+                              href="#pricing">الخطط</a>
+                    </div>
+                    <div class="footer-col">
+                         <h4>الشركة</h4><a href="https://www.qredit.ps/about/ar">عن Qredit</a><a href="#contact">تواصل
+                              معنا</a><a href="#faq">الأسئلة الشائعة</a>
+                    </div>
+                    <div class="footer-col footer-contact">
+                         <h4>التواصل</h4><a class="footer-ltr" dir="ltr"
+                              href="mailto:sales@qredit.tech">sales@qredit.tech</a><a class="footer-ltr" dir="ltr"
+                              href="tel:+972566666069">+972 56 666 6069</a><a class="footer-ltr" dir="ltr"
+                              href="tel:+972566666029">+972 56 666 6029</a>
+                         <p>الماصيون، مقابل بنك القدس<br />رام الله، فلسطين</p>
+                    </div>
+               </div>
+               <div class="footer-bottom"><span>© 2026 Qredit LTD. جميع الحقوق محفوظة.</span><span><a
+                              href="https://www.qredit.ps/terms/ar">الشروط والأحكام</a> · <a
+                              href="https://www.qredit.ps/privacy">سياسة الخصوصية</a></span></div>
+          </div>
+     </footer>
+
+     <script src="./js/translations.js"></script>
+     <script src="./js/animations.js"></script>
+</body>
+
+</html>
