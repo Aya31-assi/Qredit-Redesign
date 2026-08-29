@@ -134,14 +134,14 @@
       font-size: 12px; font-weight: 800; letter-spacing: .065em; text-transform: uppercase;
     }
     .eyebrow {
-      display: inline-block; padding: 7px 13px; margin-bottom: 20px; border-radius: 999px;
+      display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; margin-bottom: 20px; border-radius: 999px;
       background: rgba(59,111,224,.1); letter-spacing: 0; line-height: 1.45; text-transform: none;
       max-width: 100%;
     }
     .eyebrow-dot {
-      display: inline-block; width: 7px; height: 7px; margin-inline-end: 8px;
-      border-radius: 2px; background: var(--navy); vertical-align: middle;
+      flex: 0 0 7px; width: 7px; height: 7px; border-radius: 2px; background: var(--navy);
     }
+    .eyebrow-text { min-width: 0; }
     .kicker { margin-bottom: 14px; }
     .kicker::before { content: ""; width: 16px; height: 2px; border-radius: 99px; background: currentColor; }
     .section-head { max-width: 680px; margin-bottom: 46px; }
@@ -717,19 +717,15 @@
       .hero-zoom-sticky { min-height: 520px; }
       .hero-zoom-art { object-position: 62% center; }
       .hero-zoom-copy {
-        position: relative !important; inset: 0 !important; display: flex !important; flex-direction: column !important;
-        align-items: center !important; justify-content: center !important; gap: 0.12em; padding: 22px 18px 30px;
-        font-size: clamp(46px,13vw,78px); line-height: .9;
+        position: absolute; inset: 0; display: block; padding: 0;
+        font-size: clamp(44px,12vw,74px); line-height: .9;
       }
       .hero-zoom-copy span {
-        position: static !important; display: block !important; width: auto !important; max-width: none !important;
-        text-align: center !important; opacity: 1 !important; clip-path: inset(0) !important; transform: none !important;
-        white-space: normal; letter-spacing: -.04em;
+        position: absolute; display: block; width: auto; max-width: 84%;
+        opacity: 0; white-space: normal; letter-spacing: -.04em;
       }
-      .hero-zoom-copy .slogan-one, .hero-zoom-copy .slogan-two {
-        left: auto !important; right: auto !important; top: auto !important; bottom: auto !important;
-      }
-      .hero-zoom-copy .slogan-two { margin-top: 0; }
+      .hero-zoom-copy .slogan-one { left: 20px; top: 34px; }
+      .hero-zoom-copy .slogan-two { right: 20px; bottom: 42px; margin-top: 0; text-align: right; }
       .hero-actions { display: grid; grid-template-columns: 1fr; }
       .hero-actions .btn { width: 100%; }
       .payment-demo { min-height: 570px; }
@@ -1184,14 +1180,6 @@
     font-size: clamp(9px, 2.65vw, 11px);
     line-height: 1.45;
   }
-}
-
-.eyebrow-origin {
-  display: inline-block;
-  margin-inline: .12em;
-  color: var(--mint-deep);
-  font: inherit;
-  font-weight: 900;
 }
 
 /* 22. DESKTOP STORY-STACK REFINEMENTS*/

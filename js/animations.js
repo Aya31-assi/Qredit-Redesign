@@ -108,7 +108,7 @@
       const updateHeroZoom = () => {
         if (!heroZoomScene || !heroZoomSticky || !heroZoomCanvas) return;
 
-        if (window.innerWidth <= 680 || reduceMotion.matches) {
+        if (reduceMotion.matches) {
           heroZoomCanvas.style.setProperty("--zoom-clip-y", "0%");
           heroZoomCanvas.style.setProperty("--zoom-clip-x", "0%");
           heroZoomCanvas.style.setProperty("--zoom-radius", "24px");
