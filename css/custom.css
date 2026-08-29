@@ -292,6 +292,7 @@
     .hero-zoom-copy .slogan-two { right: clamp(24px,5vw,84px); bottom: clamp(38px,8vh,96px); text-align: right; clip-path: inset(100% 0 0 0); transform: translateY(-42px); }
     .hero-zoom-cue { position: absolute; left: 50%; bottom: 18px; z-index: 4; display: inline-flex; align-items: center; gap: 7px; color: rgba(255,255,255,.6); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; transform: translateX(-50%); opacity: 0; transition: opacity .2s ease; }
     .hero-zoom-cue::after { content: ""; width: 24px; height: 1px; background: currentColor; }
+    .hero-zoom-mobile-slogan { display: none; }
 
     /* 07. BRAND VALUES
        Dark values panel, generated SVG ribbon, and continuously moving value marquee */
@@ -1182,43 +1183,55 @@
   }
 
   .hero-zoom-scene {
-    height: 150vh;
-    min-height: 900px;
+    height: auto;
+    min-height: 0;
+    padding: 30px 0 42px;
+    overflow: hidden;
   }
 
   .hero-zoom-sticky {
-    top: 70px;
-    height: calc(100svh - 70px);
-    min-height: 460px;
+    position: relative;
+    top: auto;
+    height: min(62svh, 560px);
+    min-height: 420px;
+    margin-top: 8px;
   }
 
-  .hero-zoom-copy {
-    position: absolute;
-    inset: 0;
+  .hero-zoom-canvas {
+    --zoom-clip-y: 5%;
+    --zoom-clip-x: 3%;
+    --zoom-radius: 24px;
+    --zoom-screen-scale: 1.02;
+  }
+
+  .hero-zoom-screen {
+    animation: mobileBrandImageZoom 5.5s ease-in-out infinite alternate;
+  }
+
+  .hero-zoom-copy,
+  .hero-zoom-cue {
+    display: none;
+  }
+
+  .hero-zoom-mobile-slogan {
     display: block;
-    padding: 0;
-    font-size: clamp(42px, 14.5vw, 66px);
-    line-height: .92;
+    width: min(100% - 36px, 520px);
+    margin: 24px auto 0;
+    color: var(--navy);
+    direction: ltr;
+    font-family: var(--font-display);
+    font-size: clamp(40px, 13vw, 64px);
+    font-weight: 700;
+    line-height: .94;
+    letter-spacing: 0;
   }
 
-  .hero-zoom-copy span {
-    position: absolute;
+  .hero-zoom-mobile-slogan span {
     display: block;
-    width: auto;
-    max-width: 84%;
-    opacity: 0;
-    white-space: normal;
-    letter-spacing: -.04em;
   }
 
-  .hero-zoom-copy .slogan-one {
-    left: 20px;
-    top: 34px;
-  }
-
-  .hero-zoom-copy .slogan-two {
-    right: 20px;
-    bottom: 42px;
+  .hero-zoom-mobile-slogan span:last-child {
+    color: var(--mint-deep);
     text-align: right;
   }
 }

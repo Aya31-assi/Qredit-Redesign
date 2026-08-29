@@ -108,6 +108,16 @@
       const updateHeroZoom = () => {
         if (!heroZoomScene || !heroZoomSticky || !heroZoomCanvas) return;
 
+        if (window.innerWidth <= 680 && !reduceMotion.matches) {
+          heroZoomCanvas.style.setProperty("--zoom-clip-y", "5%");
+          heroZoomCanvas.style.setProperty("--zoom-clip-x", "3%");
+          heroZoomCanvas.style.setProperty("--zoom-radius", "24px");
+          heroZoomCanvas.style.setProperty("--zoom-screen-scale", "1.02");
+          heroZoomCanvas.style.setProperty("--zoom-shade", ".2");
+          if (heroZoomCue) heroZoomCue.style.opacity = "0";
+          return;
+        }
+
         if (reduceMotion.matches) {
           heroZoomCanvas.style.setProperty("--zoom-clip-y", "0%");
           heroZoomCanvas.style.setProperty("--zoom-clip-x", "0%");
