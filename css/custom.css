@@ -1180,6 +1180,47 @@
     font-size: clamp(9px, 2.65vw, 11px);
     line-height: 1.45;
   }
+
+  .hero-zoom-scene {
+    height: 165vh;
+    min-height: 1080px;
+  }
+
+  .hero-zoom-sticky {
+    top: 70px;
+    height: calc(100svh - 70px);
+    min-height: 500px;
+  }
+
+  .hero-zoom-copy {
+    position: absolute;
+    inset: 0;
+    display: block;
+    padding: 0;
+    font-size: clamp(42px, 14.5vw, 66px);
+    line-height: .92;
+  }
+
+  .hero-zoom-copy span {
+    position: absolute;
+    display: block;
+    width: auto;
+    max-width: 84%;
+    opacity: 0;
+    white-space: normal;
+    letter-spacing: -.04em;
+  }
+
+  .hero-zoom-copy .slogan-one {
+    left: 20px;
+    top: 34px;
+  }
+
+  .hero-zoom-copy .slogan-two {
+    right: 20px;
+    bottom: 42px;
+    text-align: right;
+  }
 }
 
 /* 22. DESKTOP STORY-STACK REFINEMENTS*/

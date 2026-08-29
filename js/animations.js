@@ -153,11 +153,29 @@
 
         const sloganProgress = easeOutCubic((rawProgress - .46) / .27);
         if (sloganOne) {
+          sloganOne.style.position = "absolute";
+          sloganOne.style.left = compact ? "20px" : "";
+          sloganOne.style.right = "";
+          sloganOne.style.top = compact ? "34px" : "";
+          sloganOne.style.bottom = "";
+          sloganOne.style.maxWidth = compact ? "84%" : "";
+          sloganOne.style.width = "auto";
+          sloganOne.style.display = "block";
+          sloganOne.style.textAlign = "";
           sloganOne.style.opacity = sloganProgress.toFixed(3);
           sloganOne.style.clipPath = `inset(0 0 ${((1 - sloganProgress) * 100).toFixed(2)}% 0)`;
           sloganOne.style.transform = `translateY(${((1 - sloganProgress) * 42).toFixed(2)}px)`;
         }
         if (sloganTwo) {
+          sloganTwo.style.position = "absolute";
+          sloganTwo.style.left = "";
+          sloganTwo.style.right = compact ? "20px" : "";
+          sloganTwo.style.top = "";
+          sloganTwo.style.bottom = compact ? "42px" : "";
+          sloganTwo.style.maxWidth = compact ? "84%" : "";
+          sloganTwo.style.width = "auto";
+          sloganTwo.style.display = "block";
+          sloganTwo.style.textAlign = "right";
           sloganTwo.style.opacity = sloganProgress.toFixed(3);
           sloganTwo.style.clipPath = `inset(${((1 - sloganProgress) * 100).toFixed(2)}% 0 0 0)`;
           sloganTwo.style.transform = `translateY(${((1 - sloganProgress) * -42).toFixed(2)}px)`;
@@ -303,6 +321,8 @@
         toggle.setAttribute("aria-label", menu.classList.contains("is-open")
           ? localizedText("إغلاق قائمة التنقل", "Close navigation menu")
           : localizedText("فتح قائمة التنقل", "Open navigation menu"));
+
+        requestStoryUpdate();
       });
 
       menu.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
@@ -315,6 +335,7 @@
         }
         requestStoryUpdate();
       });
+      window.addEventListener("load", requestStoryUpdate);
       window.addEventListener("scroll", onScroll, { passive: true });
       reduceMotion.addEventListener?.("change", requestStoryUpdate);
       mobileStory.addEventListener?.("change", requestStoryUpdate);

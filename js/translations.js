@@ -251,6 +251,9 @@
   const arabicDescription = description?.content || "";
   const englishDescription = "Qredit is a Palestinian fintech platform that brings payment channels and transaction management together in one place.";
   const languageButtons = [...document.querySelectorAll("[data-language-toggle]")];
+  const heroEyebrowText = document.querySelector(".hero .eyebrow-text");
+  const heroEyebrowArabic = "حلول دفع رقمية فلسطينية صُمّمت لنمو أعمالك";
+  const heroEyebrowEnglish = "Palestinian digital payment solutions built for your business growth";
   const textEntries = [];
   const attributeEntries = [];
 
@@ -298,6 +301,10 @@
       const translated = english ? (englishByArabic[arabic] || arabic) : arabic;
       node.nodeValue = `${leading}${translated}${trailing}`;
     });
+
+    if (heroEyebrowText) {
+      heroEyebrowText.textContent = english ? heroEyebrowEnglish : heroEyebrowArabic;
+    }
 
     attributeEntries.forEach(({ element, attribute, arabic, english: translated }) => {
       element.setAttribute(attribute, english ? translated : arabic);
