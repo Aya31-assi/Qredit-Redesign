@@ -82,6 +82,12 @@
     }
     .logo-lockup { display: inline-flex; align-items: center; flex-shrink: 0; direction: ltr; }
     .brand-wordmark { display: block; width: auto; height: 30px; object-fit: contain; }
+    .brand-mark {
+      display: none; width: 32px; height: 32px; align-items: center; justify-content: center;
+      border-radius: 10px; background: linear-gradient(135deg, rgba(22,201,155,.2), rgba(59,111,224,.18));
+      color: var(--navy); font-family: var(--font-display); font-size: 20px; font-weight: 800; line-height: 1;
+      box-shadow: inset 0 0 0 1px rgba(12,21,49,.08);
+    }
     .mini-wordmark { display: block; width: 102px; height: auto; object-fit: contain; }
     .mini-wordmark + small { margin-top: 8px; }
     .brand-inline { color: inherit; font-family: var(--font-body-latin); font-weight: 700; }
@@ -127,8 +133,15 @@
       display: inline-flex; align-items: center; gap: 8px; color: var(--signal);
       font-size: 12px; font-weight: 800; letter-spacing: .065em; text-transform: uppercase;
     }
-    .eyebrow { padding: 7px 13px; margin-bottom: 20px; border-radius: 999px; background: rgba(59,111,224,.1); letter-spacing: 0; text-transform: none; }
-    .eyebrow-dot { width: 7px; height: 7px; border-radius: 2px; background: var(--navy); }
+    .eyebrow {
+      display: inline-block; padding: 7px 13px; margin-bottom: 20px; border-radius: 999px;
+      background: rgba(59,111,224,.1); letter-spacing: 0; line-height: 1.45; text-transform: none;
+      white-space: nowrap;
+    }
+    .eyebrow-dot {
+      display: inline-block; width: 7px; height: 7px; margin-inline-end: 8px;
+      border-radius: 2px; background: var(--navy); vertical-align: middle;
+    }
     .kicker { margin-bottom: 14px; }
     .kicker::before { content: ""; width: 16px; height: 2px; border-radius: 99px; background: currentColor; }
     .section-head { max-width: 680px; margin-bottom: 46px; }
@@ -651,11 +664,17 @@
       .method-layout { grid-template-columns: 1fr; gap: 38px; }
       .method-layout .section-head { max-width: 680px; }
       .payment-universe { min-height: 560px; }
-      .integration-stage { grid-template-columns: 1fr; gap: 0; }
-      .integration-bridge { min-height: 112px; }
-      .integration-bridge::before { left: 50%; right: auto; top: -18px; bottom: -18px; width: 2px; height: auto; transform: scaleY(0); }
-      .integration-stage.is-visible .integration-bridge::before { transform: scaleY(1); }
-      .integration-stage:not(.is-visible) .solution-card.light, .integration-stage:not(.is-visible) .solution-card.dark { transform: translateY(55px) scale(.96); }
+      .integration-stage {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 12px;
+        border: 1px solid rgba(12, 21, 49, 0.08);
+        border-radius: 28px;
+        background: linear-gradient(180deg, rgba(59,111,224,.04), rgba(22,201,155,.03));
+      }
+      .integration-bridge { display: none; }
+      .integration-stage:not(.is-visible) .solution-card.light, .integration-stage:not(.is-visible) .solution-card.dark { transform: translateY(28px) scale(.985); }
+      .solution-card { min-height: 0; padding: 28px 24px; border-radius: 20px; }
       .bridge-pulse { display: none; }
       .faq-showcase { grid-template-columns: 1fr; max-width: 760px; margin: 0 auto; gap: 14px; }
       .faq-center { position: relative; top: auto; order: -1; padding: 0 0 20px; }
@@ -674,6 +693,10 @@
        Story cards stop sticking and content becomes a single readable column */
     @media (max-width: 680px) {
       .wrap, .nav-inner { width: min(100% - 32px, 1180px); }
+      .logo-lockup { min-width: 36px; }
+      .brand-wordmark { display: none; }
+      .brand-mark { display: inline-flex; }
+      .nav-inner { gap: 12px; }
       section { padding: 62px 0; }
       .values-section { padding-top: 34px; }
       .values-header { flex-direction: column; align-items: flex-start; gap: 14px; padding-bottom: 22px; }
@@ -687,12 +710,25 @@
       .faq-card summary { min-height: 70px; }
       .values-ribbon { left: -28%; width: 156%; opacity: .24; }
       .hero { padding: 62px 0 50px; }
+      .hero .eyebrow { max-width: 100%; font-size: clamp(10px, 3vw, 12px); }
       .hero h1 { font-size: clamp(39px, 13vw, 54px); }
       .hero-copy > p { font-size: 15px; }
       .hero-zoom-sticky { min-height: 520px; }
       .hero-zoom-art { object-position: 62% center; }
-      .hero-zoom-copy { font-size: clamp(46px,13vw,78px); }
-      .hero-zoom-copy span { max-width: 88%; }
+      .hero-zoom-copy {
+        position: relative !important; inset: 0 !important; display: flex !important; flex-direction: column !important;
+        align-items: center !important; justify-content: center !important; gap: 0.12em; padding: 22px 18px 30px;
+        font-size: clamp(46px,13vw,78px); line-height: .9;
+      }
+      .hero-zoom-copy span {
+        position: static !important; display: block !important; width: auto !important; max-width: none !important;
+        text-align: center !important; opacity: 1 !important; clip-path: inset(0) !important; transform: none !important;
+        white-space: normal; letter-spacing: -.04em;
+      }
+      .hero-zoom-copy .slogan-one, .hero-zoom-copy .slogan-two {
+        left: auto !important; right: auto !important; top: auto !important; bottom: auto !important;
+      }
+      .hero-zoom-copy .slogan-two { margin-top: 0; }
       .hero-actions { display: grid; grid-template-columns: 1fr; }
       .hero-actions .btn { width: 100%; }
       .payment-demo { min-height: 570px; }
@@ -711,7 +747,8 @@
       .payment-node { position: relative; left: auto !important; top: auto !important; width: auto; min-width: 0; transform: none !important; animation: none; }
       .payment-node:last-child { grid-column: 1 / -1; width: calc(50% - 6px); justify-self: center; }
       .universe-caption { bottom: 22px; }
-      .solution-card { min-height: 280px; padding: 28px; }
+      .integration-stage { padding: 10px; border-radius: 22px; }
+      .solution-card { min-height: 0; padding: 24px 20px; }
       .story-copy { min-height: 330px; padding: 30px 25px; }
       .story-copy h3 { font-size: clamp(27px,8vw,32px); }
       .story-media { min-height: 310px; }
@@ -931,6 +968,7 @@
     @media (max-width: 680px) {
       .wrap, .nav-inner { width: min(100% - 32px, 1180px); }
       section { padding-block: 68px; }
+      .hero .eyebrow { max-width: 100%; font-size: clamp(10px,3vw,12px); }
       .hero h1 { font-size: clamp(38px,11.5vw,50px); }
       .hero-copy > p { font-size: 16.5px; }
       .section-head h2, .faq-head h2, .cta-band h2 { font-size: clamp(28px,8vw,32px); }

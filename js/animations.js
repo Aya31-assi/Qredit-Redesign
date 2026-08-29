@@ -108,7 +108,7 @@
       const updateHeroZoom = () => {
         if (!heroZoomScene || !heroZoomSticky || !heroZoomCanvas) return;
 
-        if (reduceMotion.matches) {
+        if (window.innerWidth <= 680 || reduceMotion.matches) {
           heroZoomCanvas.style.setProperty("--zoom-clip-y", "0%");
           heroZoomCanvas.style.setProperty("--zoom-clip-x", "0%");
           heroZoomCanvas.style.setProperty("--zoom-radius", "24px");
@@ -119,8 +119,17 @@
             word.style.opacity = "1";
             word.style.clipPath = "inset(0)";
             word.style.transform = "none";
+            word.style.position = "static";
+            word.style.left = "auto";
+            word.style.right = "auto";
+            word.style.top = "auto";
+            word.style.bottom = "auto";
+            word.style.maxWidth = "none";
+            word.style.width = "auto";
+            word.style.display = "block";
+            word.style.textAlign = "center";
           });
-          if (heroZoomCue) heroZoomCue.style.opacity = "1";
+          if (heroZoomCue) heroZoomCue.style.opacity = "0";
           return;
         }
 
