@@ -278,7 +278,7 @@
     .hero-zoom-scene { position: relative; height: 220vh; min-height: 1500px; padding: 0; overflow: visible; background: var(--white); border-top: 0; }
     .hero-zoom-sticky { position: sticky; top: 78px; height: calc(100svh - 78px); min-height: 560px; overflow: hidden; background: var(--white); }
     .hero-zoom-canvas {
-      --zoom-clip-y: 18%; --zoom-clip-x: 23%; --zoom-radius: 30px; --zoom-screen-scale: 1.055; --zoom-shade: .12;
+      --zoom-clip-y: 12%; --zoom-clip-x: 10%; --zoom-radius: 30px; --zoom-screen-scale: 1.045; --zoom-shade: .12;
       position: absolute; inset: 0; overflow: hidden; isolation: isolate; background: #dfeadd;
       clip-path: inset(var(--zoom-clip-y) var(--zoom-clip-x) round var(--zoom-radius));
       box-shadow: 0 34px 90px rgba(12,21,49,.22); will-change: clip-path;
@@ -1182,14 +1182,14 @@
   }
 
   .hero-zoom-scene {
-    height: 165vh;
-    min-height: 1080px;
+    height: 150vh;
+    min-height: 900px;
   }
 
   .hero-zoom-sticky {
     top: 70px;
     height: calc(100svh - 70px);
-    min-height: 500px;
+    min-height: 460px;
   }
 
   .hero-zoom-copy {

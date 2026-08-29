@@ -140,18 +140,20 @@
         const expansion = easeOutCubic(rawProgress / .72);
         const compact = window.innerWidth <= 680;
         const tablet = window.innerWidth <= 900;
-        const startClipX = compact ? 6 : tablet ? 13 : 23;
-        const startClipY = compact ? 12 : tablet ? 15 : 18;
+        const startClipX = compact ? 3 : tablet ? 7 : 10;
+        const startClipY = compact ? 8 : tablet ? 10 : 12;
 
         heroZoomCanvas.style.setProperty("--zoom-clip-y", `${(startClipY * (1 - expansion)).toFixed(3)}%`);
         heroZoomCanvas.style.setProperty("--zoom-clip-x", `${(startClipX * (1 - expansion)).toFixed(3)}%`);
         heroZoomCanvas.style.setProperty("--zoom-radius", `${(30 * (1 - expansion)).toFixed(2)}px`);
-        heroZoomCanvas.style.setProperty("--zoom-screen-scale", (1.055 - expansion * .055).toFixed(4));
+        heroZoomCanvas.style.setProperty("--zoom-screen-scale", (1.045 - expansion * .045).toFixed(4));
 
         const shadeProgress = easeOutCubic((rawProgress - .25) / .48);
         heroZoomCanvas.style.setProperty("--zoom-shade", (.12 + shadeProgress * .34).toFixed(3));
 
-        const sloganProgress = easeOutCubic((rawProgress - .46) / .27);
+        const sloganStart = compact ? .18 : .42;
+        const sloganDuration = compact ? .28 : .3;
+        const sloganProgress = easeOutCubic((rawProgress - sloganStart) / sloganDuration);
         if (sloganOne) {
           sloganOne.style.position = "absolute";
           sloganOne.style.left = compact ? "20px" : "";
